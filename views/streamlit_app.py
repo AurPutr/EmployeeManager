@@ -25,6 +25,5 @@ end_date = st.date_input("Leaving date", datetime.date.today())
 #end_date field shouldn't be mandatory
 status = st.checkbox("Active Employee")
 
-#st.session_state.duomenys = pd.concat
-
-# we need to add submit button and
+# we need to add submit button
+submit = st.button("Submit Data")

@@ -35,11 +35,12 @@ with tab4:
         st.subheader("Add New Results")
         # Naudojame formą, kad puslapis nepersikrautų kaskart keičiant vieną laukelį
         with st.form("ivesties_forma", clear_on_submit=True):
-            agent_id = st.number_input("Agent ID:")
+            agent_id = st.number_input("Agent ID:", min_value=0)
             q_score_baseline = st.number_input("Quality Score Baseline:", min_value=0, max_value=100)
             q_score_final = st.number_input("Quality Score Final:", min_value=0, max_value=100)
-            difference = st.number_input("Difference:", value= q_score_final - q_score_baseline)
-            score = st.number_input("Score:", )
+            # difference = st.number_input("Difference:", value= q_score_final - q_score_baseline)
+            # difference = st.write(q_score_final-q_score_baseline)
+            # score = st.number_input("Score:", )
 
 
             submit = st.form_submit_button("Submit Data")
